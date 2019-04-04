@@ -1,0 +1,11 @@
+http://www.w3.org/ns/org#Organization
+http://xmlns.com/foaf/0.1/Organization
+http://data.kasabi.com/dataset/renewable-energy-generators/schema/generators/WindTurbineInstallation
+http://www.w3.org/ns/org#Site
+http://data.kasabi.com/dataset/renewable-energy-generators/schema/generators/Generator
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://data.kasabi.com/dataset/renewable-energy-generators/schema/generators/Installation
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2006/vcard/ns#VCard
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://www.w3.org/2000/01/rdf-schema#Class

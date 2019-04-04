@@ -1,0 +1,12 @@
+http://purl.org/dc/elements/1.1/description
+http://purl.org/dc/terms/isFormatOf
+http://purl.org/dc/elements/1.1/title
+http://xmlns.com/foaf/0.1/homepage
+http://rdfs.org/ns/void#exampleResource
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/hasFormat
+http://purl.org/dc/terms/format
+http://www.w3.org/2000/01/rdf-schema#label
+http://rdfs.org/ns/void#sparqlEndpoint
+http://xmlns.com/foaf/0.1/primaryTopic
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

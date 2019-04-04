@@ -1,0 +1,9 @@
+http://purl.org/net/provenance/ns#DataAccess
+http://purl.org/net/provenance/ns#DataItem
+http://zeitkunst.org/bibtex/0.1/bibtex.owl#Entry
+http://purl.org/net/provenance/ns#HumanActor
+http://xmlns.com/foaf/0.1/Person
+http://purl.org/net/provenance/ns#NonHumanActor
+http://xmlns.com/foaf/0.1/Group
+http://purl.org/net/provenance/ns#Representation
+http://purl.org/net/provenance/ns#DataCreation

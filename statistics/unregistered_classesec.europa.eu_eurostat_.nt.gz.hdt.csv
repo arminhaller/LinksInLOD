@@ -1,0 +1,9 @@
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#NUTSRegion
+http://ec.europa.eu/eurostat/ramon/ontologies/legislation.rdf#Category
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Country
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Group
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Activity
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Section
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Division
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#CountryGroup
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Class

@@ -1,0 +1,15 @@
+http://xmlns.com/foaf/0.1/Organization
+http://dbpedia.org/ontology/University
+http://dbpedia.org/ontology/Award
+http://data.nobelprize.org/terms/LaureateAward
+http://dbpedia.org/ontology/City
+http://data.nobelprize.org/terms/Category
+http://xmlns.com/foaf/0.1/Person
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://data.nobelprize.org/terms/FileType
+http://data.nobelprize.org/terms/PrizeFile
+http://data.nobelprize.org/terms/Laureate
+http://data.nobelprize.org/terms/NobelPrize
+http://data.nobelprize.org/terms/AwardFile
+http://dbpedia.org/ontology/Country
+http://www.w3.org/2000/01/rdf-schema#Class

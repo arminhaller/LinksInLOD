@@ -1,0 +1,15 @@
+http://purl.org/twc/vocab/conversion/AbstractDataset
+http://logd.tw.rpi.edu/source/congress-gov/dataset/biographical-directory-of-the-united-states-congress/vocab/Party
+http://purl.org/twc/vocab/conversion/MetaDataset
+http://purl.org/twc/vocab/conversion/SameAsDataset
+http://purl.org/twc/vocab/conversion/Dataset
+http://logd.tw.rpi.edu/source/congress-gov/vocab/Dataset
+http://logd.tw.rpi.edu/source/congress-gov/dataset/biographical-directory-of-the-united-states-congress/vocab/Congressperson
+http://purl.org/twc/vocab/conversion/LayerDataset
+http://purl.org/twc/vocab/conversion/EnhancementConversionProcess
+http://www.w3.org/TR/xmlschema-2/#gYear
+http://purl.org/twc/vocab/conversion/DatasetSample
+http://logd.tw.rpi.edu/source/congress-gov/dataset/biographical-directory-of-the-united-states-congress/vocab/Congress
+http://inference-web.org/2.1exper/pml-provenance.owl#AntecedentRole
+http://purl.org/twc/vocab/conversion/RawConversionProcess
+http://purl.org/twc/vocab/conversion/VersionedDataset

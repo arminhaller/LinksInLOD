@@ -1,0 +1,13 @@
+http://xmlns.com/foaf/0.1/Organization
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#NUTSRegion
+http://rdfs.org/ns/void#Dataset
+http://ec.europa.eu/eurostat/ramon/ontologies/legislation.rdf#Category
+http://purl.org/ontology/bibo/Legislation
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#Country
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Group
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Activity
+http://rdfs.org/ns/void#Linkset
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Section
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Division
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#CountryGroup
+http://ec.europa.eu/eurostat/ramon/ontologies/nace.rdf#Class

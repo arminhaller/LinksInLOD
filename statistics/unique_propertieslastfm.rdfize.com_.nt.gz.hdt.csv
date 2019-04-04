@@ -1,0 +1,15 @@
+http://rdfs.org/ns/void#target
+http://rdfs.org/ns/void#uriRegexPattern
+http://www.w3.org/2000/01/rdf-schema#seeAlso
+http://purl.org/dc/terms/subject
+http://purl.org/dc/terms/creator
+http://xmlns.com/foaf/0.1/homepage
+http://rdfs.org/ns/void#vocabulary
+http://rdfs.org/ns/void#exampleResource
+http://xmlns.com/foaf/0.1/mbox
+http://open.vocab.org/terms/mirror
+http://purl.org/dc/terms/modified
+http://www.w3.org/2000/01/rdf-schema#label
+http://open.vocab.org/terms/specification
+http://purl.org/dc/terms/description
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

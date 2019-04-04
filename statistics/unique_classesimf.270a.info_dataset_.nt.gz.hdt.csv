@@ -1,0 +1,10 @@
+http://rdfs.org/ns/void#Dataset
+http://rdfs.org/ns/void#DatasetDescription
+http://www.w3.org/ns/sparql-service-description#Service
+http://purl.org/linked-data/cube#AttributeProperty
+http://purl.org/linked-data/cube#MeasureProperty
+http://purl.org/linked-data/cube#Observation
+http://rdfs.org/ns/void#Linkset
+http://purl.org/linked-data/cube#DimensonProperty
+http://www.w3.org/ns/sparql-service-description#Dataset
+http://www.w3.org/ns/sparql-service-description#Graph

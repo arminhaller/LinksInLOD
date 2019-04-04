@@ -1,0 +1,17 @@
+http://ld.panlex.org/plx/denotationExpression
+http://ld.panlex.org/plx/registrationDate
+http://ld.panlex.org/plx/wordClass
+http://www.w3.org/2000/01/rdf-schema#comment
+http://ld.panlex.org/plx/languageVarietyOf
+http://ld.panlex.org/plx/identifier
+http://ld.panlex.org/plx/degradedText
+http://ld.panlex.org/plx/license
+http://ld.panlex.org/plx/approver
+http://ld.panlex.org/plx/meaningDefinition
+http://www.w3.org/2000/01/rdf-schema#label
+http://ld.panlex.org/plx/languageVariety
+http://ld.panlex.org/plx/yearOfPublication
+http://ld.panlex.org/plx/isbn
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://ld.panlex.org/plx/quality
+http://ld.panlex.org/plx/denotationMeaning

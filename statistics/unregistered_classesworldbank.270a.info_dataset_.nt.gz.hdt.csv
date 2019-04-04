@@ -1,0 +1,6 @@
+http://purl.org/linked-data/cube#AttributeProperty
+http://purl.org/linked-data/cube#MeasureProperty
+http://www.w3.org/2001/XMLSchema#decimal
+http://purl.org/linked-data/cube#ComponentSpecification
+http://worldbank.270a.info/classification/percentile
+http://purl.org/linked-data/cube#DataSet

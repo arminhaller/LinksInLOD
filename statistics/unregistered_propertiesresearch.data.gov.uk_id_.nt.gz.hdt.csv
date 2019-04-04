@@ -1,0 +1,9 @@
+http://xmlns.com/foaf/0.1/Organization
+http://research.data.gov.uk/def/project/ProjectRole
+http://xmlns.com/foaf/0.1/Person
+http://purl.org/vocab/aiiso/schema#Institution
+http://www.w3.org/2004/02/skos/core#Concept
+http://research.data.gov.uk/def/project/FundingMechanism
+http://research.data.gov.uk/def/project/GrantScheme
+http://research.data.gov.uk/def/project/Region
+http://xmlns.com/foaf/0.1/Project

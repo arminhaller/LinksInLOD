@@ -1,0 +1,8 @@
+http://www.w3.org/2006/03/wn/wn20/schema/NounSynset
+http://www.monnet-project.eu/lemon#Form
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.monnet-project.eu/lemon#Lexicon
+http://www.monnet-project.eu/lemon#LexicalEntry
+http://www.w3.org/2006/03/wn/wn20/schema/Word
+http://www.monnet-project.eu/lemon#LexicalSense
+http://www.w3.org/2006/03/wn/wn20/schema/NounWordSense

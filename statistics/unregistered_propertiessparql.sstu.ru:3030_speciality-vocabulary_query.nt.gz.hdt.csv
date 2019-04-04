@@ -1,0 +1,7 @@
+http://sparql.sstu.ru:3030/speciality-vocabulary/LevelEducation
+http://www.w3.org/2002/07/owl#AllDisjointClasses
+http://sparql.sstu.ru:3030/speciality-vocabulary/ScientificSpeciality
+http://sparql.sstu.ru:3030/speciality-vocabulary/TheList
+http://sparql.sstu.ru:3030/speciality-vocabulary/UGSN
+http://sparql.sstu.ru:3030/speciality-vocabulary/Speciality
+http://www.w3.org/2002/07/owl#NamedIndividual

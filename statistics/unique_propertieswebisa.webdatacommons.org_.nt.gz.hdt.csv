@@ -1,0 +1,14 @@
+http://www.w3.org/ns/prov#wasDerivedFrom
+http://webisa.webdatacommons.org/ontology#hasConfidence
+http://www.w3.org/2002/07/owl#sameAs
+http://webisa.webdatacommons.org/ontology#hasHead
+http://webisa.webdatacommons.org/ontology#hasPldSpread
+http://webisa.webdatacommons.org/ontology#hasPreModifier
+http://www.w3.org/2000/01/rdf-schema#label
+http://webisa.webdatacommons.org/ontology#hasFrequency
+http://webisa.webdatacommons.org/ontology#hasPidSpread
+http://www.w3.org/ns/prov#wasGeneratedBy
+http://www.w3.org/2004/02/skos/core#broader
+http://www.w3.org/ns/prov#value
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://webisa.webdatacommons.org/ontology#hasPostModifier

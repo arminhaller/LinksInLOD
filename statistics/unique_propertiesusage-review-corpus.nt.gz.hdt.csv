@@ -1,0 +1,10 @@
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#predLang
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex
+http://www.gsi.dit.upm.es/ontologies/marl/ns#describesObjectFeature
+http://www.gsi.dit.upm.es/ontologies/marl/ns#hasPolarity
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lang
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex

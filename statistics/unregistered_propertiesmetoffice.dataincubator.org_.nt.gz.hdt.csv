@@ -1,0 +1,15 @@
+http://www.w3.org/2002/07/owl#Restriction
+http://www.w3.org/2000/01/rdf-schema#Literal
+http://purl.org/ns/meteo#Wind
+http://www.w3.org/2007/ont/unit#Unit
+http://www.w3.org/2007/ont/unit#Quantity
+http://purl.org/ns/meteo#Forecast
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://purl.org/ns/meteo#Category
+http://www.w3.org/2003/01/geo/wgs84_pos#Point
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/2002/07/owl#Ontology
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://xmlns.com/foaf/0.1/Document
+http://www.w3.org/2002/07/owl#Class
+http://purl.org/ns/meteo#Place

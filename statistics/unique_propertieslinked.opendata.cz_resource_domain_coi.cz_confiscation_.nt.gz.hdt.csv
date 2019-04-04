@@ -1,0 +1,12 @@
+http://www.w3.org/2004/02/skos/core#notation
+http://purl.org/goodrelations/v1#hasUnitOfMeasurement
+http://purl.org/goodrelations/v1#hasBrand
+http://schema.org/result
+http://purl.org/goodrelations/v1#name
+http://purl.org/goodrelations/v1#typeOfGood
+http://purl.org/goodrelations/v1#includesObject
+http://purl.org/goodrelations/v1#amountOfThisGood
+http://rdfs.org/ns/void#inDataset
+http://purl.org/goodrelations/v1#category
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2002/07/owl#sameAs

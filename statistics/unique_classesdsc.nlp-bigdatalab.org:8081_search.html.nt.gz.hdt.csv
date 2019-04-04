@@ -1,0 +1,9 @@
+http://dsc.nlp-bigdatalab.org:8086/ontology/#症状
+http://dsc.nlp-bigdatalab.org:8086/ontology/#药品
+http://dsc.nlp-bigdatalab.org:8086/ontology/#西医症状
+http://dsc.nlp-bigdatalab.org:8086/症状
+http://dsc.nlp-bigdatalab.org:8086/ontology/#科室
+http://dsc.nlp-bigdatalab.org:8086/ontology/#疾病
+http://dsc.nlp-bigdatalab.org:8086/西医症状
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.w3.org/2002/07/owl#Class

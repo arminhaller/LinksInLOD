@@ -1,0 +1,17 @@
+http://rdfs.org/ns/void#Dataset
+http://rdfs.org/ns/void#DatasetDescription
+http://www.w3.org/ns/sparql-service-description#Service
+http://purl.org/linked-data/cube#AttributeProperty
+http://purl.org/linked-data/cube#MeasureProperty
+http://www.w3.org/2001/XMLSchema#decimal
+http://rdfs.org/ns/void#Linkset
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://purl.org/linked-data/cube#ComponentSpecification
+http://purl.org/linked-data/cube#DataStructureDefinition
+http://purl.org/linked-data/cube#DimensionProperty
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/ns/sparql-service-description#Dataset
+http://worldbank.270a.info/classification/percentile
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://www.w3.org/ns/sparql-service-description#Graph
+http://purl.org/linked-data/cube#DataSet

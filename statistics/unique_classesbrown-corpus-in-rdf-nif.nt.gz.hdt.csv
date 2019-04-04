@@ -1,0 +1,9 @@
+http://www.w3.org/ns/prov#Entity
+http://www.w3.org/ns/sparql-service-description#Dataset
+http://rdfs.org/ns/void#Dataset
+http://www.w3.org/ns/prov#Agent
+http://xmlns.com/foaf/0.1/Agent
+http://www.w3.org/ns/prov#Activity
+http://dataid.dbpedia.org/ns/core#Dataset
+http://dataid.dbpedia.org/ns/core#Distribution
+http://www.w3.org/ns/dcat#Dataset

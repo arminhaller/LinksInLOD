@@ -1,0 +1,7 @@
+http://rdfs.org/ns/void#Dataset
+foaf:Organization
+http://rdfs.org/ns/void#DatasetDescription
+http://rdfs.org/ns/void#Linkset
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2000/01/rdf-schema#Class

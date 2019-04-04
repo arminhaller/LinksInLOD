@@ -1,0 +1,13 @@
+http://xmlns.com/foaf/0.1/Organization
+http://www.gnoss.com/gnoss.owl#ResultSet
+http://rdfs.org/ns/void#Dataset
+http://www.w3.org/2002/07/owl#Restriction
+http://www.gnoss.com/gnoss.owl#Filter
+http://www.w3.org/2001/XMLSchema#int
+http://www.gnoss.com/gnoss.owl#Thing
+http://rdfs.org/ns/void#Linkset
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/2002/07/owl#Ontology
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.w3.org/2002/07/owl#Class
+http://www.w3.org/2002/07/owl#FunctionalProperty

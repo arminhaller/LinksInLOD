@@ -1,0 +1,6 @@
+http://mlode.nlp2rdf.org/resource/ids/vocabulary/language
+http://mlode.nlp2rdf.org/resource/ids/vocabulary/chapter
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://mlode.nlp2rdf.org/resource/ids/vocabulary/entry
+http://www.w3.org/2000/01/rdf-schema#Class
+http://mlode.nlp2rdf.org/resource/ids/vocabulary/langclass

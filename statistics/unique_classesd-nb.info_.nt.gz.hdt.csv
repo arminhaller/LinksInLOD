@@ -1,0 +1,16 @@
+http://purl.org/ontology/bibo/Document
+http://purl.org/ontology/bibo/Article
+http://purl.org/ontology/bibo/AudioVisualDocument
+http://purl.org/ontology/bibo/Series
+http://vivoweb.org/ontology/core#Score
+http://purl.org/ontology/mo/Label
+http://schema.org/MusicRelease
+http://www.opengis.net/ont/sf#Polygon
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.opengis.net/ont/sf#Point
+http://purl.org/ontology/bibo/Collection
+http://purl.org/ontology/bibo/Map
+http://purl.org/ontology/mo/CorporateBody
+http://purl.org/library/BrailleBook
+http://purl.org/ontology/bibo/Issue
+http://purl.org/ontology/bibo/Periodical

@@ -1,0 +1,17 @@
+http://data.czso.cz/ontology/prumernaMzda
+http://purl.org/linked-data/cube#component
+http://www.w3.org/2000/01/rdf-schema#subPropertyOf
+http://data.czso.cz/ontology/medianMzdy
+http://www.w3.org/2000/01/rdf-schema#comment
+http://data.czso.cz/ontology/refArea
+http://data.czso.cz/ontology/refPeriod
+http://purl.org/linked-data/cube#measure
+http://data.czso.cz/ontology/sex
+http://purl.org/linked-data/cube#dimension
+http://purl.org/linked-data/cube#concept
+http://www.w3.org/2000/01/rdf-schema#range
+http://purl.org/linked-data/cube#dataSet
+http://www.w3.org/2000/01/rdf-schema#label
+http://purl.org/linked-data/cube#structure
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/linked-data/cube#order

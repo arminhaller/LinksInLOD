@@ -1,0 +1,13 @@
+http://data.kasabi.com/dataset/bricklink/schema/Catalog
+http://data.kasabi.com/dataset/bricklink/schema/Set
+http://data.kasabi.com/dataset/bricklink/schema/Colour
+http://data.kasabi.com/dataset/bricklink/schema/Inventory
+http://data.kasabi.com/dataset/bricklink/schema/Category
+http://data.kasabi.com/dataset/bricklink/schema/Part
+http://data.kasabi.com/dataset/bricklink/schema/Instructions
+http://data.kasabi.com/dataset/bricklink/schema/Book
+http://data.kasabi.com/dataset/bricklink/schema/Product
+http://www.w3.org/2004/02/skos/core#Concept
+http://data.kasabi.com/dataset/bricklink/schema/InventoryItem
+http://xmlns.com/foaf/0.1/Image
+http://data.kasabi.com/dataset/bricklink/schema/Minifig

@@ -1,0 +1,16 @@
+http://patents.data.gov.uk/def/patents/applicant
+http://www.w3.org/2003/01/geo/wgs84_pos#lat
+http://patents.data.gov.uk/def/patents/address
+http://patents.data.gov.uk/def/patents/inventor
+http://www.w3.org/2003/01/geo/wgs84_pos#long
+http://patents.data.gov.uk/def/patents/footNote
+http://purl.org/dc/terms/subject
+http://patents.data.gov.uk/def/patents/lodgedDate
+http://xmlns.com/foaf/0.1/page
+http://patents.data.gov.uk/def/patents/agent
+http://patents.data.gov.uk/def/patents/filingDate
+http://www.w3.org/2000/01/rdf-schema#label
+http://patents.data.gov.uk/def/patents/patentID
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://research.data.gov.uk/def/project/location
+http://research.data.gov.uk/def/project/postcode

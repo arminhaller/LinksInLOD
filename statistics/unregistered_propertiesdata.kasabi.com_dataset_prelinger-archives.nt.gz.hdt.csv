@@ -1,0 +1,16 @@
+http://xmlns.com/foaf/0.1/Organization
+http://data.kasabi.com/dataset/prelinger-archives/schema/SoundFormat
+http://purl.org/dc/dcmitype/MovingImage
+http://purl.org/dc/dcmitype/Image
+http://data.kasabi.com/dataset/prelinger-archives/schema/
+http://data.kasabi.com/dataset/prelinger-archives/schema/MovingImage
+http://data.kasabi.com/dataset/prelinger-archives/schema/ColourFormat
+http://data.kasabi.com/dataset/prelinger-archives/schema/Format
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://xmlns.com/foaf/0.1/Image
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2002/07/owl#Ontology
+http://www.w3.org/2000/01/rdf-schema#Class
+http://data.kasabi.com/dataset/prelinger-archives/schema/MovieFormat
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://purl.org/stuff/rev#Review

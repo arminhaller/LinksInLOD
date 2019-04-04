@@ -1,0 +1,17 @@
+http://www.w3.org/2003/01/geo/wgs84_pos#lat
+http://www.lotico.com/ontology/state
+http://www.lotico.com/ontology/memberid
+http://www.lotico.com/ontology/ISO_3166-1-alpha-2
+http://xmlns.com/foaf/0.1/name
+http://www.w3.org/2000/01/rdf-schema#seeAlso
+http://www.w3.org/2003/01/geo/wgs84_pos#long
+http://www.lotico.com/ontology/twitter
+http://www.lotico.com/ontology/zip
+http://www.lotico.com/ontology/hasMembershipEvent
+http://xmlns.com/foaf/0.1/img
+http://www.lotico.com/ontology/memberOf
+http://www.w3.org/2000/01/rdf-schema#label
+http://www.lotico.com/ontology/city
+http://www.lotico.com/ontology/hasTopicInterest
+http://www.lotico.com/ontology/countryCode
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

@@ -1,0 +1,10 @@
+http://www.w3.org/2001/XMLSchema#string
+http://linked.opendata.cz/ontology/domain/vavai/Soutez
+http://linked.opendata.cz/ontology/domain/vavai/ves/Resort
+http://linked.opendata.cz/ontology/domain/vavai/ves/Typ
+http://linked.opendata.cz/ontology/domain/vavai/ves/Stav
+http://linked.opendata.cz/ontology/domain/vavai/ves/MistoPodani
+http://linked.opendata.cz/ontology/domain/vavai/ves/Aktivita
+http://linked.opendata.cz/ontology/domain/vavai/Dodavka
+http://www.w3.org/2001/XMLSchema#integer
+http://linked.opendata.cz/ontology/domain/vavai/ves/Financovani

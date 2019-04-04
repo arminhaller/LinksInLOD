@@ -1,0 +1,6 @@
+http://rdfs.org/ns/void#Dataset
+http://rdfs.org/ns/void#Linkset
+http://purl.org/ontology/bibo/Book
+http://purl.org/vocab/frbr/core#Manifestation
+http://purl.org/dc/terms/BibliographicResource
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq

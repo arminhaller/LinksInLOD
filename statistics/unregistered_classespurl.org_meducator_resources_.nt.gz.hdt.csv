@@ -1,0 +1,17 @@
+http://purl.org/meducator/ns/RepurposingHistory
+http://www.w3.org/2001/XMLSchema#string
+http://purl.org/meducator/ns/RepurposedTo
+http://purl.org/meducator/ns/DisciplineSpeciality
+http://purl.org/meducator/ns/RepurposingParent
+http://downlode.org/rdf/iso-639/schema#Language
+http://purl.org/meducator/ns/RepurposingResource
+http://purl.org/meducator/ns/RepurposedFrom
+http://purl.org/meducator/ns/Resource
+http://www.w3.org/2001/XMLSchema#anyURI
+http://purl.org/meducator/ns/Discipline
+http://purl.org/meducator/ns/RepurposingChild
+http://www.purl.org/meducator/ns/#Resource
+http://purl.org/meducator/ns/IPRType
+http://purl.org/meducator/ns/ExternalTerm
+http://purl.org/meducator/ns/Subject
+http://purl.org/meducator/ns/RepurposingFrom

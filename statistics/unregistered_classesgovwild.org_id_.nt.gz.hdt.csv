@@ -1,0 +1,13 @@
+http://govwild.org/0.6/GWOntology.rdf#LegalEntity
+http://www.w3.org/2001/XMLSchema#string
+http://govwild.org/0.6/GWOntology.rdf#Employment
+http://govwild.org/0.6/GWOntology.rdf#PreFusedEntity
+http://govwild.org/0.6/GWOntology.rdf#Fund
+http://govwild.org/0.6/GWOntology.rdf#PersonRelationship
+http://govwild.org/0.6/GWOntology.rdf#Person
+http://govwild.org/0.6/GWOntology.rdf#Date
+http://govwild.org/0.6/GWOntology.rdf#Address
+http://govwild.org/0.6/GWOntology.rdf#NewsArticle
+http://www.w3.org/2001/XMLSchema#int
+http://www.w3.org/2001/XMLSchema#double
+http://govwild.org/0.6/GWOntology.rdf#SourceDetailed

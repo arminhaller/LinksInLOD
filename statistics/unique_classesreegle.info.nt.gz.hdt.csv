@@ -1,0 +1,13 @@
+http://xmlns.com/foaf/0.1/Organization
+http://reegle.info/schema#ProjectOutput
+http://www.geonames.org/ontology#Feature
+http://reegle.info/schema#CountryProfile
+http://reegle.info/schema#Specialisation
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Resource
+http://reegle.info/schema#Technology
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://xmlns.com/foaf/0.1/Image
+http://www.w3.org/2004/02/skos/core#Concept
+http://reegle.info/schema#Sector
+http://www.w3.org/2000/01/rdf-schema#Class
+http://xmlns.com/foaf/0.1/Document

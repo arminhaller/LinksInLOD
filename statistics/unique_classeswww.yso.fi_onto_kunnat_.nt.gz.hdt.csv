@@ -1,0 +1,13 @@
+http://www.yso.fi/onto/kunnat/Kielisuhde
+http://www.yso.fi/onto/kunnat/ELYkeskus
+http://www.yso.fi/onto/kunnat/Aluehallintovirasto
+http://www.yso.fi/onto/kunnat/Maakunta
+http://www.yso.fi/onto/kunnat/Seutukunta
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.yso.fi/onto/kunnat/Kunta
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.yso.fi/onto/kunnat/Sairaanhoitopiiri
+http://www.w3.org/2004/02/skos/core#Collection
+http://www.yso.fi/onto/kunnat/Suuralue
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://www.yso.fi/onto/kunnat/Vaalipiiri

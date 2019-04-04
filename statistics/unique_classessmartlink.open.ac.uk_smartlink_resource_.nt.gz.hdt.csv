@@ -1,0 +1,15 @@
+http://www.w3.org/2000/01/rdf-schema#Literal
+http://cms-wg.sti2.org/ns/minimal-service-model#Service
+http://www.purl.org/smartlink/service-nfp#Status
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.purl.org/smartlink/service-nfp#Example
+http://www.purl.org/smartlink/service-nfp#QoS
+http://commontag.org/ns#Tag
+http://www.purl.org/smartlink/service-nfp#Protocol
+http://www.w3.org/2000/01/rdf-schema#Resource
+http://purl.org/dc/terms/Agent
+http://www.w3.org/2000/01/rdf-schema#Class
+http://purl.org/dc/terms/LicenseDocument
+http://xmlns.com/foaf/0.1/Person
+http://lodlaundromat.org/Status
+http://xmlns.com/foaf/0.1/Project

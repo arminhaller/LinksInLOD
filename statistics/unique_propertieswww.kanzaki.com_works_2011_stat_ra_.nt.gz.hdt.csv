@@ -1,0 +1,16 @@
+http://rdfs.org/ns/void#target
+http://purl.org/dc/terms/created
+http://purl.org/dc/terms/subject
+http://purl.org/dc/terms/creator
+http://xmlns.com/foaf/0.1/homepage
+http://rdfs.org/ns/void#vocabulary
+http://rdfs.org/ns/void#exampleResource
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/modified
+http://rdfs.org/ns/void#dataDump
+http://rdfs.org/ns/void#feature
+http://rdfs.org/ns/void#void:triples
+http://rdfs.org/ns/void#sparqlEndpoint
+http://rdfs.org/ns/void#linkPredicate
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/dc/terms/source

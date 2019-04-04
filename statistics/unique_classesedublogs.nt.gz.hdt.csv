@@ -1,0 +1,11 @@
+http://blog/2013-11#Blog
+http://rdfs.org/sioc/ns#Item
+http://blog/2013-11#Edition
+http://xmlns.com/foaf/0.1/Person
+http://rdfs.org/sioc/ns#Space
+http://creativecommons.org/ns#License
+http://rdfs.org/sioc/types#Tag
+http://www.w3.org/2004/02/skos/core#Concept
+http://xmlns.com/foaf/0.1/Group
+http://rdfs.org/sioc/types#Comment
+http://gnoss.com/gnoss.owl#ResultSet

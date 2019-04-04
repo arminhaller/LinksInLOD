@@ -1,0 +1,7 @@
+http://www.w3.org/ns/sparql-service-description#Dataset
+http://rdfs.org/ns/void#Dataset
+http://rdfs.org/ns/void#DatasetDescription
+http://www.w3.org/ns/sparql-service-description#Service
+http://rdfs.org/ns/void#Linkset
+http://www.w3.org/ns/sparql-service-description#Graph
+http://purl.org/linked-data/cubeObservation

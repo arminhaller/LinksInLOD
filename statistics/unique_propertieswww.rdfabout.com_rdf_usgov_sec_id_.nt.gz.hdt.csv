@@ -1,0 +1,12 @@
+http://www.w3.org/2001/vcard-rdf/3.0#Pcode
+http://xmlns.com/foaf/0.1/name
+http://www.rdfabout.com/rdf/schema/ussec/officerTitle
+http://www.rdfabout.com/rdf/schema/ussec/cik
+http://www.rdfabout.com/rdf/schema/ussec/hasRelation
+http://www.w3.org/2001/vcard-rdf/3.0#Street
+http://www.rdfabout.com/rdf/schema/ussec/tradingSymbol
+http://www.rdfabout.com/rdf/schema/ussec/corporation
+http://www.w3.org/2001/vcard-rdf/3.0#ADR
+http://www.w3.org/2001/vcard-rdf/3.0#Locality
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/dc/elements/1.1/date

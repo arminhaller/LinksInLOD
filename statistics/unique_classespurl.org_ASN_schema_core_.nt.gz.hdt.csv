@@ -1,0 +1,10 @@
+http://purl.org/ASN/schema/core/Statement
+http://purl.org/ASN/schema/core/JurisdictionScheme
+http://purl.org/ASN/schema/core/CorrelationResource
+http://purl.org/ASN/schema/core/DerivedStatement
+http://purl.org/ASN/schema/core/StandardDocument
+http://purl.org/ASN/schema/core/StatusScheme
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://purl.org/ASN/schema/core/DerivedStandardDocument
+http://purl.org/ASN/schema/core/LearningResource
+http://www.w3.org/2000/01/rdf-schema#Class

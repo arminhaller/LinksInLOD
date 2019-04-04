@@ -1,0 +1,15 @@
+http://weill.cornell.edu/vivo/ontology/wcmc#SponsoredResearchAgreement
+http://vivoweb.org/ontology/core#Address
+http://vivoweb.org/ontology/core#DependentResource
+http://vivoweb.org/ontology/core#EducationalTraining
+http://vivoweb.org/ontology/core#Agreement
+http://weill.cornell.edu/vivo/ontology/wcmc#AgreementPersonnelRole
+http://weill.cornell.edu/vivo/ontology/wcmc#ClinicalTrialAgreement
+http://weill.cornell.edu/vivo/ontology/wcmc#KeyPersonnelRole
+http://vivoweb.org/harvester/excludeEntity
+http://weill.cornell.edu/vivo/ontology/wcmc#AcademicProgram
+http://vitro.mannlib.cornell.edu/ns/vitro/0.7#DependentResource
+http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Flag1Value1Thing
+http://vivoweb.org/ontology/core#URLLink
+http://weill.cornell.edu/vivo/ontology/wcmc#Office
+http://vitro.mannlib.cornell.edu/ns/vitro/0.7#Link

@@ -1,0 +1,5 @@
+http://xmlns.com/foaf/corp#Company
+http://xmlns.com/foaf/0.1/Person
+http://www.rdfabout.com/rdf/schema/ussec/DirectorRelation
+http://www.rdfabout.com/rdf/schema/ussec/TenPercentOwnerRelation
+http://www.rdfabout.com/rdf/schema/ussec/OfficerRelation

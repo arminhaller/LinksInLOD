@@ -1,0 +1,12 @@
+http://www.w3.org/2001/XMLSchema#boolean
+http://comsode.eu/ontology/DPUType
+http://comsode.eu/ontology/DPU
+http://comsode.eu/ontology/Requirement
+http://comsode.eu/ontology/DPUScope
+http://comsode.eu/ontology/Partner
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://comsode.eu/ontology/Dataset
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2000/01/rdf-schema#Class
+http://comsode.eu/ontology/RequirementType
+http://www.w3.org/2004/02/skos/core#ConceptScheme

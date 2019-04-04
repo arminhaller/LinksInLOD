@@ -1,0 +1,11 @@
+http://rdfs.org/ns/void#distinctObjects
+http://www.w3.org/2000/01/rdf-schema#seeAlso
+http://rdfs.org/ns/void#entities
+http://rdfs.org/ns/void#classes
+http://rdfs.org/ns/void#triples
+http://rdfs.org/ns/void#properties
+http://www.w3.org/2000/01/rdf-schema#label
+http://rdfs.org/ns/void#sparqlEndpoint
+http://rdfs.org/ns/void#inDataset
+http://rdfs.org/ns/void#distinctSubjects
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

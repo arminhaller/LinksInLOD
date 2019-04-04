@@ -1,0 +1,16 @@
+http://xmlns.com/foaf/0.1/Document
+http://www.geonames.org/ontology#Feature
+http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+http://www.w3.org/2002/07/owl#TransitiveProperty
+http://www.geonames.org/ontology#Map
+http://www.w3.org/2002/07/owl#AnnotationProperty
+http://www.geonames.org/ontology#RDFData
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/2002/07/owl#Ontology
+http://www.geonames.org/ontology#WikipediaArticle
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.geonames.org/ontology#Class
+http://www.w3.org/2002/07/owl#Class
+http://www.geonames.org/ontology#Code

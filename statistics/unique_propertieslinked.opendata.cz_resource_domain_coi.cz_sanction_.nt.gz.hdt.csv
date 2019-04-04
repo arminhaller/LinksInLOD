@@ -1,0 +1,10 @@
+http://data.coi.cz/ontology/paragraf
+http://data.coi.cz/ontology/zakon
+http://www.w3.org/2004/02/skos/core#notation
+http://schema.org/result
+http://purl.org/dc/terms/valid
+http://purl.org/goodrelations/v1#hasCurrencyValue
+http://rdfs.org/ns/void#inDataset
+http://purl.org/goodrelations/v1#hasCurrency
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2002/07/owl#sameAs

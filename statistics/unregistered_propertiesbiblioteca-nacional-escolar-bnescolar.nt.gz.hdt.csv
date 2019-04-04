@@ -1,0 +1,6 @@
+http://rdfs.org/sioc/ns#Item
+http://rdfs.org/sioc/ns#Space
+http://rdfs.org/sioc/types#Tag
+http://www.w3.org/2004/02/skos/core#Concept
+http://xmlns.com/foaf/0.1/Group
+http://gnoss.com/gnoss.owl#ResultSet

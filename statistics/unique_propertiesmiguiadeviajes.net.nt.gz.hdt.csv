@@ -1,0 +1,11 @@
+http://www.gnoss.com/gnoss.owl#ItemsPerPage
+http://www.w3.org/2000/01/rdf-schema#subClassOf
+http://www.w3.org/2002/07/owl#imports
+http://www.w3.org/2002/07/owl#onProperty
+http://www.w3.org/2000/01/rdf-schema#range
+http://www.gnoss.com/gnoss.owl#Page
+http://www.w3.org/2002/07/owl#maxCardinality
+http://www.gnoss.com/gnoss.owl#Results
+http://www.gnoss.com/gnoss.owl#NumberOfResults
+http://www.w3.org/2000/01/rdf-schema#domain
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

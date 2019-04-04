@@ -1,0 +1,13 @@
+http://linkonworks.net/ontology/label
+http://dsc.nlp-bigdatalab.org:8086/症状相关疾病
+http://www.w3.org/2000/01/rdf-schema#subClassOf
+http://dsc.nlp-bigdatalab.org:8086/ontology/#症状相关症状
+http://www.w3.org/2000/01/rdf-schema#range
+http://dsc.nlp-bigdatalab.org:8086/症状相关症状
+http://dsc.nlp-bigdatalab.org:8086/症状相关科室
+http://dsc.nlp-bigdatalab.org:8086/ontology/#症状相关科室
+http://dsc.nlp-bigdatalab.org:8086/ontology/#症状相关药品
+http://dsc.nlp-bigdatalab.org:8086/ontology/#症状相关疾病
+http://dsc.nlp-bigdatalab.org:8086/症状相关药品
+http://www.w3.org/2000/01/rdf-schema#domain
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

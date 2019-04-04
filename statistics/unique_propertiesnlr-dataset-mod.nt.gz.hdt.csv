@@ -1,0 +1,14 @@
+http://purl.org/dc/elements/1.1/created
+http://purl.org/dc/elements/1.1/creator
+http://rdfs.org/ns/void#rootResource
+http://purl.org/dc/elements/1.1/description
+http://rdfs.org/ns/void#entities
+http://rdfs.org/ns/void#triples
+http://purl.org/dc/elements/1.1/title
+http://xmlns.com/foaf/0.1/homepage
+http://rdfs.org/ns/void#exampleResource
+http://rdfs.org/ns/void#feature
+http://rdfs.org/ns/void#uriSpace
+http://www.w3.org/2000/01/rdf-schema#label
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://rdfs.org/ns/void#subset

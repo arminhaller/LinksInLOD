@@ -1,0 +1,17 @@
+http://gnoss.com/gnoss.owl#NumberOfResults
+http://rdfs.org/sioc/ns#has_space
+http://gnoss.com/gnoss.owl#Page
+http://xmlns.com/foaf/0.1/name
+http://purl.org/dc/terms/created
+http://gnoss.com/gnoss.owl#Results
+http://gnoss.com/gnoss.owl#ItemsPerPage
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://rdfs.org/sioc/ns#content
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/type
+http://www.w3.org/2000/01/rdf-schema#label
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://rdfs.org/sioc/ns#topic
+http://rdfs.org/sioc/ns#has_creator
+http://gnoss.com/gnoss.owl#has_docSem
+http://purl.org/dc/terms/source

@@ -1,0 +1,14 @@
+http://sparql.sstu.ru:3030/speciality-vocabulary/isPartOfUGSN
+http://www.w3.org/1999/02/22-rdf-syntax-ns#first
+http://www.w3.org/2002/07/owl#members
+http://sparql.sstu.ru:3030/speciality-vocabulary/isPartOfList
+http://sparql.sstu.ru:3030/speciality-vocabulary/equalsTo
+http://sparql.sstu.ru:3030/speciality-vocabulary/hasLevelEducation
+http://sparql.sstu.ru:3030/speciality-vocabulary/hasCode
+http://sparql.sstu.ru:3030/speciality-vocabulary/approvedDocument
+http://sparql.sstu.ru:3030/speciality-vocabulary/dateOfIntroduction
+http://sparql.sstu.ru:3030/speciality-vocabulary/UGSNConsistsOf
+http://www.w3.org/2000/01/rdf-schema#label
+http://sparql.sstu.ru:3030/speciality-vocabulary/specialityConsistsOf
+http://www.w3.org/1999/02/22-rdf-syntax-ns#rest
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

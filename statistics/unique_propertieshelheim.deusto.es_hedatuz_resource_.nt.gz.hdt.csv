@@ -1,0 +1,16 @@
+http://purl.org/dc/elements/1.1/publisher
+http://purl.org/dc/elements/1.1/creator
+http://purl.org/dc/elements/1.1/type
+http://purl.org/dc/elements/1.1/format
+http://xmlns.com/foaf/0.1/name
+http://purl.org/dc/elements/1.1/description
+http://purl.org/dc/elements/1.1/contributor
+http://purl.org/dc/elements/1.1/language
+http://purl.org/dc/elements/1.1/title
+http://purl.org/dc/elements/1.1/identifier
+http://purl.org/ontology/bibo/DocumentStatus
+http://purl.org/dc/elements/1.1/relation
+http://purl.org/dc/elements/1.1/subject
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2002/07/owl#sameAs
+http://purl.org/dc/elements/1.1/date

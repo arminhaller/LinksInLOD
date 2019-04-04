@@ -1,0 +1,9 @@
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex
+http://www.w3.org/2005/11/its/rdf#taIdentRef
+http://www.w3.org/ns/prov#wasAttributedTo
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex

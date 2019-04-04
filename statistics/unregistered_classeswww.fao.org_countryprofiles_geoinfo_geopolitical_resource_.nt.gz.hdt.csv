@@ -1,0 +1,14 @@
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/disputed
+http://www.w3.org/2001/XMLSchema#string
+http://www.w3.org/2001/XMLSchema#float
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/economic_region
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/group
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/non_self_governing
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/territory
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/other
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/area
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/self_governing
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/organization
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/special_group
+http://www.w3.org/2001/XMLSchema#int
+http://www.fao.org/countryprofiles/geoinfo/geopolitical/resource/geographical_region

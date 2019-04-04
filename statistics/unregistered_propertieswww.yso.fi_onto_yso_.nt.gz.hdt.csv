@@ -1,0 +1,16 @@
+http://purl.org/iso25964/skos-thes#ThesaurusArray
+http://www.yso.fi/onto/yso-meta/Hierarchy
+http://purl.org/iso25964/skos-thes#ConceptGroup
+http://www.yso.fi/onto/yso-meta/Individual
+http://purl.org/finnonto/schema/skosext#DeprecatedConcept
+http://www.yso.fi/onto/yso-meta/Concept
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://www.w3.org/2002/07/owl#Class
+http://www.w3.org/2004/02/skos/core#Collection
+http://www.w3.org/2000/01/rdf-schema#Resource
+http://www.w3.org/2002/07/owl#DatatypeProperty
+http://www.w3.org/2004/02/skos/core#Concept
+http://www.yso.fi/onto/yso-meta/2007-03-02/DeprecatedConcept
+http://www.w3.org/2002/07/owl#ObjectProperty
+http://www.w3.org/2004/02/skos/core#ConceptScheme
+http://purl.org/dc/terms/LinguisticSystem

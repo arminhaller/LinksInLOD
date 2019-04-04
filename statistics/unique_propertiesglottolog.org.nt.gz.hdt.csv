@@ -1,0 +1,16 @@
+http://www.w3.org/2003/01/geo/wgs84_pos#lat
+http://purl.org/dc/terms/description
+http://www.w3.org/2004/02/skos/core#broader
+http://www.w3.org/2004/02/skos/core#editorialNote
+http://www.w3.org/2003/01/geo/wgs84_pos#long
+http://www.w3.org/2004/02/skos/core#altLabel
+http://www.w3.org/2004/02/skos/core#narrower
+http://purl.org/dc/terms/isReferencedBy
+http://purl.org/dc/terms/title
+http://www.w3.org/2004/02/skos/core#changeNote
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://www.w3.org/2000/01/rdf-schema#label
+http://rdfs.org/ns/void#inDataset
+http://lexvo.org/ontology#iso639P3PCode
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/dc/terms/isReplacedBy

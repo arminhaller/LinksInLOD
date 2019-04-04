@@ -1,0 +1,12 @@
+http://xmlns.com/foaf/0.1/name
+http://purl.org/dc/terms/creator
+http://xmlns.com/foaf/0.1/homepage
+http://rdfs.org/ns/void#exampleResource
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/contributor
+http://rdfs.org/ns/void#dataDump
+http://purl.org/dc/terms/publisher
+http://purl.org/dc/terms/license
+http://rdfs.org/ns/void#uriPattern
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2002/07/owl#sameAs

@@ -1,0 +1,12 @@
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#hasParentRegion
+http://www.w3.org/2004/02/skos/core#notation
+http://data.czso.cz/ontology/hasMunicipalityWithExtendedPower
+http://data.czso.cz/ontology/hasAuthorizedMunicipality
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#regionCode
+http://www.w3.org/2004/02/skos/core#broaderTransitive
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#name
+http://data.czso.cz/ontology/statute
+http://purl.org/dc/terms/title
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://ec.europa.eu/eurostat/ramon/ontologies/geographic.rdf#level
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

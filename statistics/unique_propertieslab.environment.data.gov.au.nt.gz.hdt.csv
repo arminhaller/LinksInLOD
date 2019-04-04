@@ -1,0 +1,16 @@
+http://creativecommons.org/ns#license
+http://purl.org/linked-data/api/vocab#extendedMetadataVersion
+http://purl.org/dc/elements/1.1/creator
+http://www.w3.org/2000/01/rdf-schema#comment
+http://www.w3.org/2002/07/owl#imports
+http://purl.org/dc/elements/1.1/description
+http://purl.org/dc/elements/1.1/title
+http://purl.org/linked-data/api/vocab#definition
+http://purl.org/dc/elements/1.1/rights
+http://purl.org/dc/terms/modified
+http://purl.org/dc/elements/1.1/identifier
+http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+http://purl.org/dc/elements/1.1/source
+http://xmlns.com/foaf/0.1/primaryTopic
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/dc/elements/1.1/date

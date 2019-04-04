@@ -1,0 +1,10 @@
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#ID
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#HEAD
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#FEAT
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#LEMMA
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#UPOS
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextWord
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#EDGE
+http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence
+http://ufal.mff.cuni.cz/conll2009-st/task-description.html#WORD
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type

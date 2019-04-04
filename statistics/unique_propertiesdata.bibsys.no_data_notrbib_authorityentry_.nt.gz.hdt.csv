@@ -1,0 +1,12 @@
+http://purl.org/ontology/bibo/suffixName
+http://purl.org/dc/terms/identifier
+http://xmlns.com/foaf/0.1/name
+http://www.w3.org/2004/02/skos/core#altLabel
+http://def.bibsys.no/xmlns/radatana/1.0#catalogueName
+http://purl.org/dc/terms/modified
+http://www.w3.org/2004/02/skos/core#note
+http://www.w3.org/2000/01/rdf-schema#label
+http://www.kanzaki.com/ns/whois#until
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.w3.org/2002/07/owl#sameAs
+http://www.kanzaki.com/ns/whois#since

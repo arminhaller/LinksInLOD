@@ -1,0 +1,8 @@
+http://www.w3.org/2001/XMLSchema#string
+http://scholarometer.indiana.edu/namespaces/discipline
+http://www.w3.org/2001/XMLSchema#date
+http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+http://scholarometer.indiana.edu/namespaces/author
+http://www.w3.org/2001/XMLSchema#integer
+http://www.w3.org/2000/01/rdf-schema#Class
+http://www.w3.org/2001/XMLSchema#decimal

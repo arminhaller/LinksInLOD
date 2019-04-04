@@ -1,0 +1,11 @@
+http://rdfs.org/ns/void#Dataset
+http://purl.org/net/schemas/space/LaunchSite
+http://purl.org/net/schemas/space/Mission
+http://purl.org/net/schemas/space/Spacecraft
+http://purl.org/net/schemas/space/Discipline
+http://xmlns.com/foaf/0.1/Person
+http://purl.org/ontology/po/Episode
+http://xmlns.com/foaf/0.1/Image
+http://purl.org/net/schemas/space/MissionRole
+file:///opt/majat/that
+http://purl.org/net/schemas/space/Launch

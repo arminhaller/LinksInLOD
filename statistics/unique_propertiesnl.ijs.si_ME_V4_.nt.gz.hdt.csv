@@ -1,0 +1,6 @@
+http://www.w3.org/2000/01/rdf-schema#seeAlso
+http://purl.org/dc/terms/provenance
+http://www.w3.org/2000/01/rdf-schema#label
+http://purl.org/dc/terms/description
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/dc/terms/license

@@ -1,0 +1,4 @@
+http://purl.org/linked-data/cube#Observation
+http://www.w3.org/2001/XMLSchema#nonNegativeInteger
+http://purl.org/linked-data/cube#DataSet
+http://purl.org/linked-data/cube#MeasureProperty

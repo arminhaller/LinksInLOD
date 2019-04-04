@@ -1,0 +1,9 @@
+http://www.w3.org/2002/07/owl#sameAs
+http://www.w3.org/ns/adms#identifier
+http://www.w3.org/2004/02/skos/core#notation
+http://www.w3.org/2004/02/skos/core#inScheme
+https://linked.opendata.cz/slovník/ekonomické-subjekty/platíOd
+https://linked.opendata.cz/slovník/ekonomické-subjekty/platíDo
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://purl.org/goodrelations/v1#legalName

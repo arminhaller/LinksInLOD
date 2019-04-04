@@ -1,0 +1,14 @@
+http://xmlns.com/foaf/0.1/depiction
+http://linkedrecipes.org/schema/servings
+http://www.w3.org/2004/02/skos/core#altLabel
+http://linkedrecipes.org/schema/category
+http://linkedrecipes.org/schema/ingredient
+http://xmlns.com/foaf/0.1/isPrimaryTopicOf
+http://purl.org/dc/terms/title
+http://purl.org/dc/terms/related
+http://www.w3.org/2004/02/skos/core#prefLabel
+http://www.w3.org/2000/01/rdf-schema#label
+http://linkedrecipes.org/schema/uses
+http://purl.org/dc/terms/description
+http://xmlns.com/foaf/0.1/primaryTopic
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
