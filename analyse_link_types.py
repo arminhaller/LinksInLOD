@@ -62,10 +62,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
             undeclared_classes_count, declared_classes_count = 0, 0
             declared_properties_count, undeclared_properties_count = 0, 0
             declared_individuals_count, reused_individuals_count, linked_individuals_count = 0, 0, 0
-            sameas_link_count = 0
-            seeAlso_link_count = 0
-            differentFrom_link_count = 0
-            allDifferent_link_count = 0
+            sameas_link_count, seeAlso_link_count, differentFrom_link_count, allDifferent_link_count = 0, 0, 0, 0
             class_link_count, property_link_count = 0, 0
             instanceTyping_link_count = 0
 
@@ -81,16 +78,16 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     unique_classes.add(triple[0])
                     declared_classes_count += 1
 
+            # Fetch all used classes
             # Fetch all instances of a class
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "")
-
             for triple in triples:
                 # Fetch all classes in object position
                 if triple[2] not in unique_classes:
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
 
-                # Fetch all unique instances in subject position
+                # Fetch all unique individuals in subject position
                 if triple[0] not in declared_individuals:
                     declared_individuals.add(triple[0])
                     declared_individuals_count += 1
@@ -104,63 +101,57 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
 
             # Fetch all SubClassOf relations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#SubClassOf", "")
-
             for triple in triples:
-                #add subject
+                #add classes in subject position
                 if triple[0] not in unique_classes:
                     unique_classes.add(triple[0])
                     undeclared_classes_count += 1
-                #add object
+                #add classes in objects position
                 if triple[2] not in unique_classes:
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
 
-            # Fetch all domain classes and properties
+            # Fetch properties and their domain classes
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#domain", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
-                    #add object
+                    #add class in object position
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
-
                 # Fetch all domain properties
                 if triple[0] not in unique_properties:
-                    #add object
+                    #add property in subject position
                     unique_properties.add(triple[0])
                     undeclared_properties_count += 1
 
-            # Fetch all range classes and properties
+            # Fetch properties and their range classes
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#range", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
-                    #add object
+                    #add class in object position
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
                 # Fetch all range properties
                 if triple[0] not in unique_properties:
-                    #add object
+                    #add property in subject position
                     unique_properties.add(triple[0])
                     undeclared_properties_count += 1
 
             # Fetch all local existential guarded class restrictions
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#someValuesFrom", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
-                    #add object
+                    #add class in object position
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
                 # Fetch all owlSomeValuesFrom properties
                 if triple[0] not in unique_properties:
-                    #add object
+                    #add property in subject position
                     unique_properties.add(triple[0])
                     undeclared_properties_count += 1
 
             # Fetch all local universal guarded class restrictions
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#allValuesFrom", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
                     #add object
@@ -168,38 +159,85 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     undeclared_classes_count += 1
                 # Fetch all owlallValuesFrom properties
                 if triple[0] not in unique_properties:
-                    #add object
+                    #add property in object position
                     unique_properties.add(triple[0])
                     undeclared_properties_count += 1
 
             # Fetch all equivalentClass relations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#equivalentClass ", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
-                    #add object
+                    #add class in object position
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
-                # Fetch all equivalent class declarations
-                if triple[0] not in unique_properties:
-                    #add object
-                    unique_properties.add(triple[0])
-                    undeclared_properties_count += 1
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
 
             # Fetch all disjointWith relations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#disjointWith ", "")
-
             for triple in triples:
                 if triple[2] not in unique_classes:
-                    #add object
+                    #add class in object position
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
-                # Fetch all equivalent class declarations
-                if triple[0] not in unique_properties:
-                    #add object
-                    unique_properties.add(triple[0])
-                    undeclared_properties_count += 1
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
 
+            # Fetch all disjointUnionWith relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#disjointUnionOf ", "")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
+
+            # Fetch all unionOf relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#unionOf ", "")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
+
+            # Fetch all intersectionOf relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#intersectionOf ", "")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
+
+            # Fetch all oneOf relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#oneOf ", "")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
+
+            # Fetch all onClass relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#onClass ", "")
+            for triple in triples:
+                if triple[2] not in unique_classes:
+                    #add class in object position
+                    unique_classes.add(triple[2])
+                    undeclared_classes_count += 1
+
+            # Fetch all complementOf relations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#complementOf ", "")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    #add class in subject position
+                    unique_classes.add(triple[0])
+                    undeclared_classes_count += 1
+                if triple[2] not in unique_classes:
+                    #add class in object position
+                    unique_classes.add(triple[2])
+                    undeclared_classes_count += 1
 
             # Fetch all Property declarations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
@@ -235,9 +273,11 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 if triple[0] not in declared_individuals and triple[0] not in unique_classes:
                     reused_individuals.add(triple[0])
                     reused_individuals_count += 1
+                    if authoritative_dataset_URI not in triple[2] and "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" not in triple[1]:
+                        linked_individuals_count += 1
+                        linked_individuals.add(triple[0])
 
                 #if object is a reused individial and not declared
-                #should be in subject position too
                 if triple[2] not in declared_individuals:
                     #o = urlparse()
                     if "http" in triple[2]:
@@ -259,7 +299,9 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 # Fetch all Property Links where authoritative URI is in subject position
                 if authoritative_dataset_URI in triple[0] and (
                         "http://www.w3.org/2000/01/rdf-schema#SubPropertyOf" in triple[
-                    1] or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
+                    1] or "http://www.w3.org/2002/07/owl#propertyChainAxiom" in triple[
+                            1]
+                        or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
                             1] or "http://www.w3.org/2002/07/owl#propertyDisjointWith" in triple[
                             1] or "http://www.w3.org/2002/07/owl#inverseOf" in triple[1]):
                     property_link_count += 1
@@ -267,7 +309,9 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 # Fetch all Property Links where authoritative URI is in object position
                 if authoritative_dataset_URI in triple[2] and (
                         "http://www.w3.org/2000/01/rdf-schema#SubPropertyOf" in triple[
-                    1] or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
+                    1] or "http://www.w3.org/2002/07/owl#onProperty" in triple[
+                            1] or "http://www.w3.org/2002/07/owl#assertionProperty" in triple[
+                            1] or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
                             1] or "http://www.w3.org/2002/07/owl#propertyDisjointWith" in triple[
                             1] or "http://www.w3.org/2002/07/owl#inverseOf" in triple[1]):
                     property_link_count += 1
