@@ -351,7 +351,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     unique_properties.add(triple[2])
                     undeclared_properties_count += 1
 
-            #initialise statistics dictionaries
+            # Initialise statistics dictionaries
             statistics["Declared Classes"] = declared_classes_count
             statistics["Undeclared Classes"] = undeclared_classes_count
             statistics["Declared Properties"] = declared_properties_count
@@ -375,6 +375,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 for unique_class in unique_classes:
                     if unique_class not in all_classes:
                         unregistered_classes.add(unique_class)
+                csv_file.close()
 
             # Read in all properties retrieved from prefix.cc
             with open('unique_properties.csv') as csv_file:
@@ -384,39 +385,40 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 for unique_property in unique_classes:
                     if unique_property not in all_properties:
                         unregistered_properties.add(unique_property)
+                csv_file.close()
 
             # Write statistics to file
-            with open('statistics/statistics' + filename + '.csv', 'w') as g:
+            with open('statistics/statistics' + filename + '.csv', 'w') as csv_file:
                 writer = csv.writer(g)
                 for key, value in statistics.items():
                     writer.writerow([key, value])
-                g.close()
+                csv_file.close()
 
             # Write unique_properties to file
-            with open('statistics/unique_properties' + filename + '.csv', 'w') as g:
+            with open('statistics/unique_properties' + filename + '.csv', 'w') as csv_file:
                 writer = csv.writer(g)
                 for val in unique_properties:
                     writer.writerow([val])
-                g.close()
+                csv_file.close()
 
             # Write unique_classes to file
-            with open('statistics/unique_classes' + filename + '.csv', 'w') as g:
+            with open('statistics/unique_classes' + filename + '.csv', 'w') as csv_file:
                 writer = csv.writer(g)
                 for val in unique_classes:
                     writer.writerow([val])
-                g.close()
+                csv_file.close()
 
             # Write unregistered_classes to file
-            with open('statistics/unregistered_classes' + filename + '.csv', 'w') as g:
-                writer = csv.writer(g)
+            with open('statistics/unregistered_classes' + filename + '.csv', 'w') as csv_file:
+                writer = csv.writer(csv_file)
                 for val in unregistered_classes:
                     writer.writerow([val])
-                g.close()
+                csv_file.close()
 
             # Write unregistered_classes to file
-            with open('statistics/unregistered_properties' + filename + '.csv', 'w') as g:
-                writer = csv.writer(g)
+            with open('statistics/unregistered_properties' + filename + '.csv', 'w') as csv_file:
+                writer = csv.writer(csv_file)
                 for val in unregistered_properties:
                     writer.writerow([val])
-                g.close()
+                csv_file.close()
         except Exception as e: print(e)

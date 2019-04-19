@@ -1,8 +1,8 @@
-http://rdfs.org/ns/void#Dataset
+http://purl.org/ontology/bibo/Document
 http://eunis.eea.europa.eu/rdf/sites-schema.rdf#Site
 http://rdfs.org/ns/void#Linkset
-http://purl.org/ontology/bibo/Document
-http://xmlns.com/foaf/0.1/Organization
-http://eunis.eea.europa.eu/rdf/species-schema.rdf#SpeciesSynonym
 http://eunis.eea.europa.eu/rdf/habitats-schema.rdf#HabitatType
 http://rdfs.org/ns/void#DatasetDescription
+http://eunis.eea.europa.eu/rdf/species-schema.rdf#SpeciesSynonym
+http://rdfs.org/ns/void#Dataset
+http://xmlns.com/foaf/0.1/Organization
