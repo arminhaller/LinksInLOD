@@ -5,7 +5,7 @@ import glob
 from urllib.parse import urlparse
 import urllib.parse
 
-HDTDIRECTORY = 'HDTfiles'
+HDTDIRECTORY = 'smallHDTs'
 
 # Read all HDT files in HDTfiles directory
 for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
@@ -389,21 +389,21 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
 
             # Write statistics to file
             with open('statistics/statistics' + filename + '.csv', 'w') as csv_file:
-                writer = csv.writer(g)
+                writer = csv.writer(csv_file)
                 for key, value in statistics.items():
                     writer.writerow([key, value])
                 csv_file.close()
 
             # Write unique_properties to file
             with open('statistics/unique_properties' + filename + '.csv', 'w') as csv_file:
-                writer = csv.writer(g)
+                writer = csv.writer(csv_file)
                 for val in unique_properties:
                     writer.writerow([val])
                 csv_file.close()
 
             # Write unique_classes to file
             with open('statistics/unique_classes' + filename + '.csv', 'w') as csv_file:
-                writer = csv.writer(g)
+                writer = csv.writer(csv_file)
                 for val in unique_classes:
                     writer.writerow([val])
                 csv_file.close()
