@@ -45,9 +45,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
             # Initialise sets for classes and properties
             unregistered_classes, unregistered_properties = set(), set()
             unique_classes, unique_properties = set(), set()
-            declared_individuals = set()
-            reused_individuals = set()
-            linked_individuals = set()
+            declared_individuals, reused_individuals, linked_individuals  = set(), set(), set()
             all_classes, all_properties = set(), set()
 
             # Store some metadata about the HDT document itself

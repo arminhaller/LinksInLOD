@@ -12,4 +12,4 @@ An analysis of the link types of the LOD Cloud and Wikidata are published in [1]
 [1] Armin Haller, Javier D. Fernández, Maulik R. Kamdar, and Axel Polleres:
 _What Are Links in Linked Open Data? A Characterization and Evaluation of Links between Knowledge Graphs on the Web_. ACM Journal of Data Information Quality 12(2): 9:1-9:34 (2020)
 
-[2] Armin Haller, Axel Polleres, Daniil Dobriy, Nicolas Ferranti, and  Sergio José Rodríguez Méndez: _An Analysis of Links in Wikidata_. In Proceedings of the 19th International Conference on The Semantic Web, ESWC. (2022)
+[2] Armin Haller, Axel Polleres, Daniil Dobriy, Nicolas Ferranti, and  Sergio José Rodríguez Méndez: _An Analysis of Links in Wikidata_. In Proceedings of the 19th International Conference on The Semantic Web (ESWC). (2022)
