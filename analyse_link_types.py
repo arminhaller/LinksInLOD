@@ -5,7 +5,7 @@ import glob
 from urllib.parse import urlparse
 import urllib.parse
 
-HDTDIRECTORY = 'smallHDTs'
+HDTDIRECTORY = 'HDTfiles'
 
 # Read all HDT files in HDTfiles directory
 for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
