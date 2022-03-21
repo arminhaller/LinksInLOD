@@ -5,13 +5,14 @@ import glob
 from urllib.parse import urlparse
 import urllib.parse
 
-HDTDIRECTORY = 'smallHDTs'
+#Download Wikidata file from https://www.rdfhdt.org/datasets/
+HDTDIRECTORY = 'HDTfiles'
 
 # Read all HDT files in HDTfiles directory
 for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
 
     #Loading authoritative URIs from generated CSV file
-    with open('authoritative_all.csv') as csvfile:
+    with open('authoritative_all_incl_wikidata.csv') as csvfile:
         data = list(csv.reader(csvfile, delimiter=';'))
     authoritative_namespace_uris = dict()
 
@@ -29,13 +30,14 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
         #Get Pay Level Domain of authoritative namespace
         namespace_authority = authoritative_namespace_uris[key]
         parsed_uri = urlparse(urllib.parse.unquote(namespace_authority[0]))
-        spltAr = namespace_authority[0].split("://");
-        i = (0, 1)[len(spltAr) > 1];
-        authoritative_dataset_URI = "http://" + spltAr[i].split("?")[0].split('/')[0].split(':')[0].lower();
+        spltAr = namespace_authority[0].split("://")
+        i = (0, 1)[len(spltAr) > 1]
+        authoritative_dataset_URI = "http://" + spltAr[i].split("?")[0].split('/')[0].split(':')[0].lower()
         filename = key
         print(authoritative_dataset_URI)
         print(filename)
 
+        #Read HDT files
         try:
             if filename.endswith("gz"):
                 document = HDTDocument(gzip.open(HDTDIRECTORY + '/' + filename, 'rb').read())
@@ -43,11 +45,12 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 document = HDTDocument(HDTDIRECTORY + '/' + filename)
 
             #Initialise sets for classes and properties
-            unregistered_classes, unregistered_properties = set(), set()
+            unregistered_classes, unregistered_properties, instance_typing_links = set(), set(), set()
             unique_classes, unique_properties = set(), set()
             declared_individuals = set()
             reused_individuals = set()
             linked_individuals = set()
+            property_links = set()
             all_classes, all_properties = set(), set()
 
             # Store some metadata about the HDT document itself
@@ -58,11 +61,11 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                            "Number of shared subject-object": + document.nb_shared
                            }
 
-            #Counts
+            # Set Counter variables
             undeclared_classes_count, declared_classes_count = 0, 0
             declared_properties_count, undeclared_properties_count = 0, 0
             declared_individuals_count, reused_individuals_count, linked_individuals_count = 0, 0, 0
-            sameas_link_count, seeAlso_link_count, differentFrom_link_count, allDifferent_link_count = 0, 0, 0, 0
+            sameas_link_count, inverseOf_link_count, externalSubproperty_link_count, externalSuperproperty_link_count, exactMatch_link_count, saidToBeTheSame_link_count = 0, 0, 0, 0, 0, 0
             class_link_count, property_link_count = 0, 0
             instanceTyping_link_count = 0
 
@@ -72,7 +75,13 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 if triple[0] not in unique_classes:
                     unique_classes.add(triple[0])
                     declared_classes_count += 1
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/2002/07/owl#Class")
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.wikidata.org/entity/Q104086571")
+            for triple in triples:
+                if triple[0] not in unique_classes:
+                    unique_classes.add(triple[0])
+                    declared_classes_count += 1
+
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.wikidata.org/entity/Q16889133")
             for triple in triples:
                 if triple[0] not in unique_classes:
                     unique_classes.add(triple[0])
@@ -80,6 +89,27 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
 
             # Fetch all used classes
             # Fetch all instances of a class
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P31", "")
+            for triple in triples:
+                # Fetch all classes in object position
+                if triple[2] not in unique_classes:
+                    unique_classes.add(triple[2])
+                    undeclared_classes_count += 1
+
+                # Fetch all unique individuals in subject position
+                if triple[0] not in declared_individuals:
+                    declared_individuals.add(triple[0])
+                    declared_individuals_count += 1
+                    if authoritative_dataset_URI not in triple[0]:
+                        if triple[0] not in linked_individuals:
+                            linked_individuals_count += 1
+                            linked_individuals.add(triple[0])
+
+                # Count all instance typing links
+                if authoritative_dataset_URI not in triple[2]:
+                    instance_typing_links.add(triple[0] + "- " + triple[1] + "- " + triple[2])
+                    instanceTyping_link_count += 1
+
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "")
             for triple in triples:
                 # Fetch all classes in object position
@@ -92,15 +122,25 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     declared_individuals.add(triple[0])
                     declared_individuals_count += 1
                     if authoritative_dataset_URI not in triple[0]:
-                        linked_individuals_count += 1
-                        linked_individuals.add(triple[0])
+                        if triple[0] not in linked_individuals:
+                            linked_individuals_count += 1
+                            linked_individuals.add(triple[0])
 
                 # Count all instance typing links
-                if authoritative_dataset_URI not in triple[2]:
+                if authoritative_dataset_URI not in triple[2] and "w3.org" not in triple[2] and "wikiba.se" not in triple[2]:
+                    instance_typing_links.add(triple[0] + "- " + triple[1] + "- " + triple[2])
+                    instanceTyping_link_count += 1
+
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P31", "")
+            for triple in triples:
+
+                # Count all instance typing links
+                if authoritative_dataset_URI not in triple[2] and "w3.org" not in triple[2] and "wikiba.se" not in triple[2]:
+                    instance_typing_links.add(triple[0] + "- " + triple[1] + "- " + triple[2])
                     instanceTyping_link_count += 1
 
             # Fetch all SubClassOf relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#SubClassOf", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P279", "")
             for triple in triples:
                 #add classes in subject position
                 if triple[0] not in unique_classes:
@@ -111,8 +151,8 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     unique_classes.add(triple[2])
                     undeclared_classes_count += 1
 
-            # Fetch properties and their domain classes
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#domain", "")
+            # Fetch properties and their domain/range classes
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/qualifier/P2308", "")
             for triple in triples:
                 if triple[2] not in unique_classes:
                     #add class in object position
@@ -124,59 +164,8 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     unique_properties.add(triple[0])
                     undeclared_properties_count += 1
 
-            # Fetch properties and their range classes
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#range", "")
-            for triple in triples:
-                if triple[2] not in unique_classes:
-                    #add class in object position
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
-                # Fetch all range properties
-                if triple[0] not in unique_properties:
-                    #add property in subject position
-                    unique_properties.add(triple[0])
-                    undeclared_properties_count += 1
-
-            # Fetch all local existential guarded class restrictions
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#someValuesFrom", "")
-            for triple in triples:
-                if triple[2] not in unique_classes:
-                    #add class in object position
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
-                # Fetch all owlSomeValuesFrom properties
-                if triple[0] not in unique_properties:
-                    #add property in subject position
-                    unique_properties.add(triple[0])
-                    undeclared_properties_count += 1
-
-            # Fetch all local universal guarded class restrictions
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#allValuesFrom", "")
-            for triple in triples:
-                if triple[2] not in unique_classes:
-                    #add object
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
-                # Fetch all owlallValuesFrom properties
-                if triple[0] not in unique_properties:
-                    #add property in object position
-                    unique_properties.add(triple[0])
-                    undeclared_properties_count += 1
-
             # Fetch all equivalentClass relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#equivalentClass ", "")
-            for triple in triples:
-                if triple[2] not in unique_classes:
-                    #add class in object position
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
-                if triple[0] not in unique_classes:
-                    #add class in subject position
-                    unique_classes.add(triple[0])
-                    undeclared_classes_count += 1
-
-            # Fetch all disjointWith relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#disjointWith ", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P1709", "")
             for triple in triples:
                 if triple[2] not in unique_classes:
                     #add class in object position
@@ -188,7 +177,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     undeclared_classes_count += 1
 
             # Fetch all disjointUnionWith relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#disjointUnionOf ", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P2738", "")
             for triple in triples:
                 if triple[0] not in unique_classes:
                     #add class in subject position
@@ -196,48 +185,19 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     undeclared_classes_count += 1
 
             # Fetch all unionOf relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#unionOf ", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P2737", "")
             for triple in triples:
                 if triple[0] not in unique_classes:
                     #add class in subject position
                     unique_classes.add(triple[0])
                     undeclared_classes_count += 1
 
-            # Fetch all intersectionOf relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#intersectionOf ", "")
+            # Fetch all Property declarations
+            (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://wikiba.se/ontology#Property")
             for triple in triples:
-                if triple[0] not in unique_classes:
-                    #add class in subject position
-                    unique_classes.add(triple[0])
-                    undeclared_classes_count += 1
-
-            # Fetch all oneOf relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#oneOf ", "")
-            for triple in triples:
-                if triple[0] not in unique_classes:
-                    #add class in subject position
-                    unique_classes.add(triple[0])
-                    undeclared_classes_count += 1
-
-            # Fetch all onClass relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#onClass ", "")
-            for triple in triples:
-                if triple[2] not in unique_classes:
-                    #add class in object position
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
-
-            # Fetch all complementOf relations
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#complementOf ", "")
-            for triple in triples:
-                if triple[0] not in unique_classes:
-                    #add class in subject position
-                    unique_classes.add(triple[0])
-                    undeclared_classes_count += 1
-                if triple[2] not in unique_classes:
-                    #add class in object position
-                    unique_classes.add(triple[2])
-                    undeclared_classes_count += 1
+                if triple[0] not in unique_properties:
+                    unique_properties.add(triple[0])
+                    declared_properties_count += 1
 
             # Fetch all Property declarations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property")
@@ -260,7 +220,7 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     unique_properties.add(triple[0])
                     declared_properties_count += 1
 
-            # Fetch all triples
+            # Fetch all triples for analysis of instance links
             (triples, cardinality) = document.search_triples("", "", "")
             for triple in triples:
 
@@ -270,20 +230,23 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     undeclared_properties_count += 1
 
                 # Fetch all reused Individuals that are not declared
-                if triple[0] not in declared_individuals and triple[0] not in unique_classes:
+                if triple[0] not in declared_individuals and triple[0] not in unique_classes and "http" in triple[2] and "wikiba.se" not in triple[2] and "XMLSchema" not in triple[2] and not triple[0].startswith("_:"):
                     reused_individuals.add(triple[0])
                     reused_individuals_count += 1
-                    if authoritative_dataset_URI not in triple[2] and "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" not in triple[1]:
-                        linked_individuals_count += 1
-                        linked_individuals.add(triple[0])
 
-                #if object is a reused individial and not declared
+                    if authoritative_dataset_URI not in triple[2] and "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" not in triple[1]:
+                        if triple[0] not in linked_individuals:
+                            linked_individuals_count += 1
+                            linked_individuals.add(triple[2])
+
+                # Fetch all objects that are reused individuals (i.e., not declared)
                 if triple[2] not in declared_individuals:
                     #o = urlparse()
                     if "http" in triple[2]:
                         if authoritative_dataset_URI not in triple[0] and not triple[0].startswith("_:") and "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" not in triple[1]:
-                            linked_individuals_count += 1
-                            linked_individuals.add(triple[0])
+                            if triple[0] not in linked_individuals:
+                                linked_individuals_count += 1
+                                linked_individuals.add(triple[0])
 
                 # Fetch all Class Links in subject position
                 if authoritative_dataset_URI not in triple[0] and triple[0] in unique_classes and "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" not in triple[1] :
@@ -297,49 +260,60 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                     class_link_count += 1
 
                 # Fetch all Property Links where authoritative URI is in subject position
-                if authoritative_dataset_URI in triple[0] and (
-                        "http://www.w3.org/2000/01/rdf-schema#SubPropertyOf" in triple[
-                    1] or "http://www.w3.org/2002/07/owl#propertyChainAxiom" in triple[
+                if authoritative_dataset_URI in triple[0] and authoritative_dataset_URI not in triple[2] and (
+                        "http://www.wikidata.org/prop/direct/P1647" in triple[
+                    1] or "http://www.wikidata.org/prop/direct/P1628" in triple[
                             1]
-                        or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#propertyDisjointWith" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#inverseOf" in triple[1]):
+                        or "http://www.wikidata.org/prop/direct/P1696" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P1889" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P8882" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P2302" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P2235" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P2236" in triple[1]):
                     property_link_count += 1
+                    property_links.add(triple)
 
                 # Fetch all Property Links where authoritative URI is in object position
-                if authoritative_dataset_URI in triple[2] and (
-                        "http://www.w3.org/2000/01/rdf-schema#SubPropertyOf" in triple[
-                    1] or "http://www.w3.org/2002/07/owl#onProperty" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#assertionProperty" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#equivalentProperty" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#propertyDisjointWith" in triple[
-                            1] or "http://www.w3.org/2002/07/owl#inverseOf" in triple[1]):
+                if authoritative_dataset_URI in triple[2] and authoritative_dataset_URI not in triple[0] and (
+                        "http://www.wikidata.org/prop/direct/P1647" in triple[
+                    1] or "http://www.wikidata.org/prop/direct/P1628" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P1696" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P1889" in triple[
+                            1] or "http://www.wikidata.org/prop/direct/P8882" in triple[1]):
                     property_link_count += 1
+                    property_links.add(triple)
 
-                #If external property used in subject of rdfs:range or rdfs:domain
-                if authoritative_dataset_URI not in triple[0] and ("http://www.w3.org/2000/01/rdf-schema#domain" in triple[1] or "http://www.w3.org/2000/01/rdf-schema#range" in triple[1]):
-                    property_link_count += 1
-
+            # Queries to count likeness relations
 
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#sameAs", "")
             for triple in triples:
                 if authoritative_dataset_URI not in triple[2]:
                     sameas_link_count += 1
 
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#seeAlso", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P2888", "")
             for triple in triples:
                 if authoritative_dataset_URI not in triple[2]:
-                    seeAlso_link_count += 1
+                    exactMatch_link_count += 1
 
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#differentFrom", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P1696", "")
             for triple in triples:
                 if authoritative_dataset_URI not in triple[2]:
-                    differentFrom_link_count += 1
+                    inverseOf_link_count += 1
 
-            (triples, cardinality) = document.search_triples("", "http://www.w3.org/2002/07/owl#AllDifferent", "")
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P2236", "")
             for triple in triples:
                 if authoritative_dataset_URI not in triple[2]:
-                    allDifferent_link_count += 1
+                    externalSubproperty_link_count += 1
+
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P460", "")
+            for triple in triples:
+                if authoritative_dataset_URI not in triple[2]:
+                    saidToBeTheSame_link_count += 1
+
+            (triples, cardinality) = document.search_triples("", "http://www.wikidata.org/prop/direct/P2235", "")
+            for triple in triples:
+                if authoritative_dataset_URI not in triple[2]:
+                    externalSuperproperty_link_count += 1
 
             # Fetch all SubProperty declarations
             (triples, cardinality) = document.search_triples("", "http://www.w3.org/2000/01/rdf-schema#SubPropertyOf", "")
@@ -360,12 +334,15 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
             statistics["Reused Individuals"] = reused_individuals_count
             statistics["Linked Individuals"] = linked_individuals_count
             statistics["SameAs Links"] = sameas_link_count
-            statistics["SeeAlso Links"] = seeAlso_link_count
-            statistics["DifferentFrom Links"] = differentFrom_link_count
-            statistics["AllDifferent Links"] = allDifferent_link_count
+            statistics["Exact Match Links"] = exactMatch_link_count
+            statistics["Said to be the Same Links"] = saidToBeTheSame_link_count
+            statistics["InverseOf Links"] = inverseOf_link_count
+            statistics["External SubProperty Links"] = externalSubproperty_link_count
+            statistics["External SuperProperty Links"] = externalSuperproperty_link_count
             statistics["Class Link Count"] = class_link_count
             statistics["Property Link Count"] = property_link_count
             statistics["Instance Typing Link Count"] = instanceTyping_link_count
+
 
             # Read in all classes retrieved from prefix.cc
             with open('unique_classes.csv') as csv_file:
@@ -392,6 +369,13 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 writer = csv.writer(csv_file)
                 for key, value in statistics.items():
                     writer.writerow([key, value])
+                csv_file.close()
+
+            with open('statistics/property_links' + filename + '.csv',
+                          'w') as csv_file:
+                writer = csv.writer(csv_file)
+                for val in property_links:
+                    writer.writerow([val])
                 csv_file.close()
 
             # Write unique_properties to file
@@ -421,4 +405,23 @@ for filepath in glob.iglob(HDTDIRECTORY + '/*.hdt'):
                 for val in unregistered_properties:
                     writer.writerow([val])
                 csv_file.close()
+
+            # Write instance_typing_links to file
+            with open('statistics/instance_typing_links' + filename + '.csv',
+                      'w') as csv_file:
+                writer = csv.writer(csv_file)
+                for val in instance_typing_links:
+                    writer.writerow([val])
+                csv_file.close()
+
+            # Write instance_typing_links to file
+            with open('statistics/instance_links' + filename + '.csv',
+                      'w') as csv_file:
+                writer = csv.writer(csv_file)
+                for val in linked_individuals:
+                    i += 1
+                    if i % 100 == 0:
+                        writer.writerow([val])
+                csv_file.close()
+
         except Exception as e: print(e)
